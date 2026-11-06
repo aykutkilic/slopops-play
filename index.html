@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>SlopOps — build the internet with your friends</title>
+    <meta name="theme-color" content="#16112e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SlopOps" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+    <meta name="description" content="A co-op point-and-click game: four 22-year-olds, a garage, a rack of servers and a hot GPU rig. Build a search engine, a video site, embeddings, a nano LLM, fine-tunes, multimodal and diffusion models, a System 1 net and a model router — for real, in your browser." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Kalam:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./icon.svg" />
+    <script type="module" crossorigin src="./assets/index-LNoG-V-s.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C0R4P3Uh.css">
+  </head>
+  <body>
+    <canvas id="gl"></canvas>
+    <div id="vignette"></div>
+    <div id="ui"></div>
+    <div id="fader"></div>
+    <div id="loader">
+      <style>#loader{z-index:50;color:#f4f6ff;background:radial-gradient(at 50% 120%,#3a1d5e,#16112e 60%);place-items:center;font-family:Fredoka,Nunito,system-ui,sans-serif;transition:opacity .7s;display:grid;position:fixed;inset:0}#loader.out{opacity:0;pointer-events:none}#loader .box{text-align:center;width:min(420px,82vw)}#loader .cup{width:64px;height:64px;margin:0 auto 18px;animation:1.6s ease-in-out infinite bob}#loader h1{margin:0 0 6px;font-size:clamp(26px,5vw,40px)}#loader p{color:#c3b3e6;min-height:20px;margin:0 0 18px;font-family:JetBrains Mono,monospace;font-size:15px}#loader .bar{background:#ffffff1f;border-radius:99px;height:10px;overflow:hidden}#loader .fill{background:linear-gradient(90deg,#6ef0a8,#5fd4ff);border-radius:99px;width:8%;height:100%;transition:width .4s}@keyframes bob{50%{transform:translateY(-6px)rotate(-4deg)}}</style>
+      <div class="box">
+        <svg class="cup" viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52" rx="14" fill="#241a4a"/><path d="M20 26h20v14a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8z" fill="#ffffff"/><path d="M22 30h16v9a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z" fill="#c2410c"/><path d="M40 30h3a4 4 0 0 1 0 8h-3" stroke="#fff" stroke-width="3" fill="none"/><path d="M26 22c0-3 3-3 3-6M32 22c0-3 3-3 3-6" stroke="#6ef0a8" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        <h1>SlopOps</h1>
+        <p id="loadmsg">$ npm install --force</p>
+        <div class="bar"><div class="fill" id="loadfill"></div></div>
+      </div>
+      <script>
+        (function () {
+          var f = document.getElementById('loadfill'), p = 8;
+          window.__loadTimer = setInterval(function () { if (p < 38) { p += 1.5; f.style.width = p + '%'; } }, 120);
+        })();
+      </script>
+    </div>
+    <div class="rotate-hint">Turn your phone sideways — the garage is wide. 💻</div>
+  </body>
+</html>
